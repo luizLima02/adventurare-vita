@@ -16,8 +16,6 @@ A chave de descriptografia é derivada diretamente do arquivo `Slayin.apk` legí
 ---
 
 ## 🎮 Recursos Deste Port
-
-- **60 FPS Cravados:** VSync ativado em hardware com limitador contínuo de taxa de quadros.
 - **Controles Nacionais do PS Vita:**
   - **D-Pad / Analógico Esquerdo:** Movimentação (Esquerda / Direita).
   - **Botão Cruz (X) / R:** Pular.
@@ -32,7 +30,7 @@ A chave de descriptografia é derivada diretamente do arquivo `Slayin.apk` legí
 
 ### Pré-requisitos:
 - Um PlayStation Vita com desbloqueio (HENkaku / Ensō) e **VitaShell** instalado.
-- O arquivo **`Slayin.apk`** original (v1.0.x para Android).
+- O arquivo **`Slayin.apk`** original (v2.0.13 para Android).
 
 ### Passo a Passo no Windows (1 Clique):
 1. Baixe o pacote compactado deste repositório (ou clone com Git).
@@ -44,32 +42,3 @@ A chave de descriptografia é derivada diretamente do arquivo `Slayin.apk` legí
 7. Divirta-se!
 
 *(Usuários Linux / macOS / Steam Deck podem rodar `python patcher.py` no terminal).*
-
----
-
-## 🛠️ Instruções Para o Desenvolvedor (Atualizar o Pacote)
-
-Se você fizer modificações de código, balanceamento ou correções na Unity:
-
-1. Abra o projeto no Unity Editor (`D:\codigos\Unity Projects\slayin`).
-2. Faça suas alterações e compile o jogo (Build Player para `Build/TempBuild`).
-3. Entre na pasta `dev_tools/` e dê dois cliques em **`dev_update.bat`** (ou execute `python dev_tools/dev_update.py`).
-4. O script automaticamente:
-   - Sincroniza os binários e módulos atualizados da engine para `base/`.
-   - Gera o novo `assets.enc` criptografado com AES-256.
-5. Faça o commit normalmente:
-   ```bash
-   git add .
-   git commit -m "feat: correcoes de jogabilidade v1.0.1"
-   git push
-   ```
-
----
-
-## 📋 Informações Técnicas
-
-- **Title ID:** `SLAI00001`
-- **Engine:** Unity 2018.2.19f1 IL2CPP (Sony PSP2)
-- **SDK da Sony:** PSP2 SDK 3.570
-- **Formato SFO:** Param.SFO oficial Sony verificado via `psp2pubcmd.exe sfo_verify`.
-- **Compatibilidade:** VitaShell 2.0+ (com cabeçalhos de caminho POSIX `/` estritos).
