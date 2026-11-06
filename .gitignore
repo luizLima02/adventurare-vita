@@ -1,0 +1,15 @@
+# Ignorar arquivos temporarios, executaveis compilados e assets nao protegidos
+*.vpk
+*.apk
+*.zip
+*.log
+
+# Git nao deve rastrear o APK colocado pelo usuario
+Slayin.apk
+slayin.apk
+
+# Arquivos de IDE
+.vs/
+.vscode/
+Thumbs.db
+Desktop.ini
